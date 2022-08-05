@@ -15,7 +15,7 @@ $(function () {
     }).eq(0).addClass("active");
 
   $(".fovarite").on('click', function(){
-    $(".fovarite").toggleClass("fovarite--active");
+    $(this).toggleClass("fovarite--active");
   });
 
   $('.products-tab__item-slider').slick({
@@ -39,5 +39,39 @@ $(function () {
     }).eq(0).addClass("active");
 
 
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+
+  $(function() {
+    $('input, select').styler();
+  });
+
+
+  $(".js-range-slider").ionRangeSlider({
+    grid: false,
+  });
   
+  $(".accordion-panel__btns").on('click', function(){
+    $(this).toggleClass("accordion-panel__btns--active");
+  });
+
+  $(".tabs-box__item").not(":first").hide();
+    $(".catalog__aside-tab .tab").click(function() {
+      $(".catalog__aside-tab .tab").removeClass("active").eq($(this).index()).addClass("active");
+      $(".tabs-box__item").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+    
 });
