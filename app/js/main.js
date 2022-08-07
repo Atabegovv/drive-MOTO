@@ -24,6 +24,26 @@ $(function () {
     slidesToScroll: 1,
     dots: false,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 675,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
   $(".products-tab__item").not(":first").hide();
@@ -42,17 +62,22 @@ $(function () {
     let acc = document.getElementsByClassName("accordion");
     let i;
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
+    // for (i = 0; i < acc.length; i++) {
+    //   acc[i].addEventListener("click", function () {
+    //     this.classList.toggle("active");
+    //     let panel = this.nextElementSibling;
+    //     if (panel.style.maxHeight) {
+    //       panel.style.maxHeight = null;
+    //     } else {
+    //       panel.style.maxHeight = panel.scrollHeight + "px";
+    //     }
+    //   });
+    // }
+
+    $(".accordion").on('click', function(){
+      $(this).toggleClass("accordion--active");
+      $(this).next().slideToggle();
+    });
 
 
   $(function() {
@@ -73,5 +98,42 @@ $(function () {
       $(".catalog__aside-tab .tab").removeClass("active").eq($(this).index()).addClass("active");
       $(".tabs-box__item").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
+
+    const items = document.querySelector('.items');
+    const temp = localStorage.getItem('temp');
+    items.dataset.temp = temp;
+
+    document.querySelectorAll('button[data-view]').forEach(item => {
+      item.addEventListener('click', () => {
+        const view = item.dataset.view;
+        items.dataset.temp = view;
+        localStorage.setItem('temp', view);
+      });
+    });
+
+    
     
 });
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+
+
+    let acc = document.getElementsByClassName("accordionjs");
+    let i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
