@@ -44,7 +44,7 @@
         &::after{
           position: absolute;
           content: '';
-          background-image: url(../img/svg/map.svg);
+          background-image: url(../images/svg/map.svg);
           width: 30px;
           height: 30px;
           top: -10px;
@@ -150,7 +150,7 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 10;
+  z-index: 11;
   top: 0px;
   left: 0px;
   overflow-x: hidden;
@@ -244,7 +244,7 @@
     &::after{
       position: absolute;
       content: '';
-      background-image: url(../img/svg/Vector\ 2.svg);
+      background-image: url(../images/svg/Vector\ 2.svg);
       height: 18px;
       width: 60px;
       top: 0;
@@ -312,7 +312,7 @@
   z-index: 1;
   &::after{
     content: '';
-    background-image: url(../img/svg/right.svg);
+    background-image: url(../images/svg/right.svg);
     width: 16px;
     height: 29px;
     position: absolute;
@@ -324,7 +324,7 @@
   z-index: 1;
   &::after{
     content: '';
-    background-image: url(../img/svg/left.svg);
+    background-image: url(../images/svg/left.svg);
     width: 16px;
     height: 29px;
     position: absolute;
@@ -453,7 +453,7 @@
       position: relative;
       &::before{
         content: '';
-        background-image: url(../img/svg/link-arrow.svg);
+        background-image: url(../images/svg/link-arrow.svg);
         width: 6px;
         height: 9px;
         position: absolute;
@@ -514,14 +514,14 @@
   .slick-next{
     // right: -20px;
     &::after{
-      background-image: url(../img/svg/right-black.svg);
+      background-image: url(../images/svg/right-black.svg);
       right: -20px;
     }
   }
   .slick-prev{
     left: -20px;
     &::after{
-      background-image: url(../img/svg/left-black.svg);
+      background-image: url(../images/svg/left-black.svg);
       left: -20px;
     }
   }
@@ -550,7 +550,7 @@
     z-index: 5;
     &::before{
       content: '';
-      background-image: url(../img/svg/heart.svg);
+      background-image: url(../images//svg/heart.svg);
       width: 24px;
       height: 22px;
       position: absolute;
@@ -558,7 +558,7 @@
       right: 0px;
     }
     &--active::before{
-      background-image: url(../img/svg/heart-blue.svg);
+      background-image: url(../images//svg/heart-blue.svg);
     }
   }
   .shoping-cart{
@@ -705,11 +705,8 @@
       display: flex;
       justify-content: space-evenly;
       height: 100%;
-      align-items: start;
+      align-items: center;
     }
-  }
-  .accordionjs{
-    cursor: pointer;
   }
   .social{
     width: 300px;
@@ -779,7 +776,7 @@
     &::after{
       position: absolute;
       content: '';
-      background-image: url(../img/svg/link-arrow.svg);
+      background-image: url(../images/svg/link-arrow.svg);
       width: 6px;
       height: 9px;
       top: 5px;
@@ -914,7 +911,7 @@
   transition: all .3s;
   &::after{
     content: '';
-    background-image: url(../img/svg/arrow-top.svg);
+    background-image: url(../images/svg/arrow-top.svg);
     transform: rotate(0deg);
     transition: all .2s;
     width: 12px;
@@ -927,19 +924,6 @@
     transform: rotate(180deg);
   }
   &-panel{
-    &js{
-      padding: 0px 15px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      border-bottom: 1px solid #7F7F7F;
-      li{
-        padding: 5px;
-        &:last-child{
-          margin-bottom: 15px;
-        }
-      }
-    }
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1026,7 +1010,7 @@
     &::before{
       position: absolute;
       content: '';
-      background-image: url(../img/svg/Check.1.svg);
+      background-image: url(../images/svg/Check.1.svg);
       width: 8px;
       height: 6px;
       top: 3px;
@@ -1062,7 +1046,7 @@
     &::before{
       content: '';
       position: absolute;
-      background-image: url(../img/svg/arrow-top.svg);
+      background-image: url(../images/svg/arrow-top.svg);
       transform: rotate(180deg);
       width: 12px;
       height: 8px;
